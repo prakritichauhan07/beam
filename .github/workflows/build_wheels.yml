@@ -211,12 +211,9 @@ jobs:
           {"os": "macos-latest", "python": "cp36-* cp37-* cp38-* cp39-*"},
           {"os": "windows-latest", "python": "cp36-* cp37-* cp38-* cp39-*"},
         ]
-        arch: [auto, aarch64]
-        exclude:
-          - os_python: {"os": "macos-latest", "python": "cp36-* cp37-* cp38-* cp39-*"}
-            arch: aarch64
-          - os_python: {"os": "windows-latest", "python": "cp36-* cp37-* cp38-* cp39-*"}
-            arch: aarch64
+        include:
+          - os_python: {"os": "ubuntu-latest", "python": "cp36-* cp37-* cp38-* cp39-*"}
+            arch: [auto, aarch64]
     steps:
     - name: Download python source distribution from artifacts
       uses: actions/download-artifact@v2
