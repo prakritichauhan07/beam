@@ -211,7 +211,7 @@ jobs:
           {"os": "macos-latest", "python": "cp36-* cp37-* cp38-* cp39-*"},
           {"os": "windows-latest", "python": "cp36-* cp37-* cp38-* cp39-*"},
         ]
-        arch: [auto, aarch64]
+        arch: [auto]
         include:
           - os_python: {"os": "ubuntu-latest", "python": "cp36-* cp37-* cp38-* cp39-*"}
             arch: aarch64
